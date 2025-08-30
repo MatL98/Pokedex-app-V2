@@ -1,0 +1,28 @@
+.pokedex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokedex-list {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .pokedex-list {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .pokedex-list {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto; 
+        gap: 15px;
+    }
+}

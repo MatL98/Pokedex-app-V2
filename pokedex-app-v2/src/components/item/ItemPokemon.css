@@ -1,0 +1,60 @@
+.cardItem {
+    width: 200px;
+    height: 200px;
+    box-shadow: 1px 1px 2px 1px #E0E0E0;
+    border-radius: 5px;
+}
+
+.cardItem:hover {
+    box-shadow: 2px 2px 2px 3px #E0E0E0;
+    border-radius: 5px;
+}
+
+.pokeInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+.pokemomnType {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0.2rem 0.5rem;
+}
+
+.divPokemonType {
+    margin: 0 0.5rem;
+    text-transform: capitalize;
+    border-radius: 8px;
+    height: 1.6rem;
+    width: 3.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+    img {
+        height: 150px;
+        width: 150px
+    }
+}
+
+@media screen and (min-width: 320px) {
+    img{
+        height: 100px;
+        width: 100px
+    }
+}
