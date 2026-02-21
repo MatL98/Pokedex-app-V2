@@ -1,28 +1,16 @@
-.pokedex{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.pokedex {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pokedex-list {
-    margin-top: 1.5rem;
-    display: grid;
-    gap: 15px;
-}
-
-@media screen and (min-width: 768px) {
-    .pokedex-list {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 15px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .pokedex-list {
-        display: grid;
-        grid-template-columns: auto auto auto auto auto; 
-        gap: 15px;
-    }
+  width: min(1200px, 94vw);
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1rem;
 }

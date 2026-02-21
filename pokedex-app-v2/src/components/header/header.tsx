@@ -1,14 +1,20 @@
 import { SearchBar } from '../searchBar/SearchBar'
+import FavoritesFilter from '../favorites/FavoritesFilter'
 import './header.css'
 
 export const Header = () => {
     return (
-        <>
-            <div className="main-header">
-                <h1 className="main-header-title">Pokedex-app-V2</h1>
-                <SearchBar></SearchBar>
+        <header className="main-header">
+            <div className="main-header-content">
+                <div className="main-header-text">
+                    <p className="main-header-kicker">Pokemon Explorer</p>
+                    <h1 className="main-header-title">Pokedex App V2</h1>
+                </div>
+                <div className="main-header-actions">
+                    <SearchBar />
+                    <FavoritesFilter />
+                </div>
             </div>
-            
-        </>
+        </header>
     )
 }

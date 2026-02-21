@@ -1,0 +1,28 @@
+.favorites-filter {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-radius: 999px;
+  height: 40px;
+  padding: 0 0.9rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.favorites-filter:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.favorites-filter.is-active {
+  background: #ffffff;
+  color: #f94144;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.favorites-filter:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}

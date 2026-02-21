@@ -1,60 +1,90 @@
 .cardItem {
-    width: 200px;
-    height: 200px;
-    box-shadow: 1px 1px 2px 1px #E0E0E0;
-    border-radius: 5px;
+  width: 100%;
+  min-height: 240px;
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid #e6edf8;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+  cursor: pointer;
+  color: #0f172a;
+  padding: 0;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.cardItem-favorite {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.25rem;
 }
 
 .cardItem:hover {
-    box-shadow: 2px 2px 2px 3px #E0E0E0;
-    border-radius: 5px;
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.14);
+  border-color: #c6d8ff;
+}
+
+.cardItem:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }
 
 .pokeInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem 0.7rem 0.95rem;
 }
 
-h1 {
-    text-transform: capitalize;
-    font-size: 1.8rem;
+.pokeInfo span {
+  width: 100%;
+  text-align: right;
+  color: #64748b;
+  font-weight: 700;
+  font-size: 0.85rem;
 }
 
-h2 {
-    font-size: 1.2rem;
+.pokeInfo img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  margin-top: -0.2rem;
+  filter: drop-shadow(0 8px 10px rgba(59, 130, 246, 0.2));
+}
+
+.pokeInfo h1 {
+  margin: 0.35rem 0 0.25rem;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  line-height: 1.2;
 }
 
 .pokemomnType {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0.2rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.42rem;
 }
 
 .divPokemonType {
-    margin: 0 0.5rem;
-    text-transform: capitalize;
-    border-radius: 8px;
-    height: 1.6rem;
-    width: 3.6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+  text-transform: capitalize;
+  border-radius: 999px;
+  min-height: 1.45rem;
+  min-width: 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0 0.5rem;
+  letter-spacing: 0.01em;
 }
 
-@media screen and (min-width: 768px) {
-    img {
-        height: 150px;
-        width: 150px
-    }
-}
-
-@media screen and (min-width: 320px) {
-    img{
-        height: 100px;
-        width: 100px
-    }
+@media screen and (min-width: 1024px) {
+  .pokeInfo img {
+    width: 120px;
+    height: 120px;
+  }
 }
