@@ -34,6 +34,10 @@ const TYPE_COLORS: Record<string, string> = {
 
 const DEFAULT_TYPE_COLOR = "#3b82f6";
 const formatStatName = (name: string) => name.replace("-", " ");
+const formatDecimeterToMeter = (value?: number) =>
+  typeof value === "number" ? (value / 10).toFixed(1).replace(".", ",") : "-";
+const formatHectogramToKg = (value?: number) =>
+  typeof value === "number" ? (value / 10).toFixed(1).replace(".", ",") : "-";
 
 const hexToRgba = (hex: string, alpha: number) => {
   const normalized = hex.replace("#", "");
@@ -120,8 +124,8 @@ export default function PokemonModal({ pokemon, isOpen, onClose }: Props) {
         <div className="pokemon-modal-grid">
           <div className="pokemon-modal-card">
             <h3>Datos</h3>
-            <p>Altura: {pokemon.height ?? "-"}</p>
-            <p>Peso: {pokemon.weight ?? "-"} kg</p>
+            <p>Altura: {formatDecimeterToMeter(pokemon.height)} m</p>
+            <p>Peso: {formatHectogramToKg(pokemon.weight)} kg</p>
             <p>Experiencia base: {pokemon.base_experience ?? "-"}</p>
           </div>
 

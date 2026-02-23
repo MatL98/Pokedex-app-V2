@@ -32,6 +32,16 @@ export const SearchBar = () => {
         placeholder="Buscar Pokemon..."
         autoComplete="off"
       />
+      {query.length > 0 && (
+        <button
+          type="button"
+          className="searchBar-clear"
+          onClick={() => setQuery("")}
+          aria-label="Borrar busqueda"
+        >
+          x
+        </button>
+      )}
     </div>
   );
 };
